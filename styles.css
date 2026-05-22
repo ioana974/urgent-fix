@@ -64,9 +64,9 @@ img { max-width: 100%; display: block; }
 }
 
 .site-header {
-  background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
-  border-bottom: none;
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.18);
+  box-shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -119,7 +119,7 @@ img { max-width: 100%; display: block; }
 
 .main-nav a:hover {
   color: var(--text);
-  background: rgba(29, 78, 216, 0.08);
+  background: rgba(59, 130, 246, 0.14);
 }
 
 .main-nav a img {
