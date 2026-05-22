@@ -1,0 +1,56 @@
+document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach((link) => {
+            link.addEventListener('click', function (event) {
+                  const targetId = this.getAttribute('href');
+                  if (targetId.length > 1) {
+                        event.preventDefault();
+                        document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+            });
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.createElement('button');
+      navToggle.className = 'nav-toggle';
+      navToggle.setAttribute('aria-label', 'Meniu');
+      navToggle.innerHTML = '<span class="bar"></span><span class="bar"></span><span class="bar"></span>';
+      const headerInner = document.querySelector('.header-inner');
+      headerInner.appendChild(navToggle);
+      const mainNav = document.querySelector('.main-nav');
+      navToggle.addEventListener('click', function () {
+            mainNav.classList.toggle('open');
+      });
+
+      // Contact form handling (client-side)
+      const form = document.getElementById('contact-form');
+      if (form) {
+            const statusEl = document.getElementById('form-status');
+
+            form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  statusEl.style.display = 'none';
+
+                  const formData = new FormData(form);
+                  const name = formData.get('name')?.toString().trim();
+                  const email = formData.get('email')?.toString().trim();
+                  const message = formData.get('message')?.toString().trim();
+
+                  if (!name || !email || !message) {
+                        statusEl.textContent = 'Te rugăm completează toate câmpurile obligatorii.';
+                        statusEl.className = 'form-status error';
+                        statusEl.style.display = 'block';
+                        return;
+                  }
+
+                  // Fake submit: show success message and reset form
+                  statusEl.textContent = 'Mesaj trimis. Îți vom răspunde în curând.';
+                  statusEl.className = 'form-status success';
+                  statusEl.style.display = 'block';
+                  form.reset();
+                  setTimeout(() => {
+                        statusEl.style.display = 'none';
+                  }, 5000);
+            });
+      }
+});
