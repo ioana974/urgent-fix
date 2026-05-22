@@ -14,12 +14,30 @@ document.addEventListener('DOMContentLoaded', function () {
       const navToggle = document.createElement('button');
       navToggle.className = 'nav-toggle';
       navToggle.setAttribute('aria-label', 'Meniu');
-      navToggle.innerHTML = '<span class="bar"></span><span class="bar"></span><span class="bar"></span>';
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.innerHTML = `
+        <span class="nav-toggle-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </span>
+        <span class="nav-toggle-label">Meniu</span>
+      `;
       const headerInner = document.querySelector('.header-inner');
-      headerInner.appendChild(navToggle);
       const mainNav = document.querySelector('.main-nav');
+      headerInner.insertBefore(navToggle, mainNav);
       navToggle.addEventListener('click', function () {
-            mainNav.classList.toggle('open');
+            const isOpen = mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen.toString());
+            navToggle.classList.toggle('active', isOpen);
+      });
+      mainNav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', function () {
+                  if (mainNav.classList.contains('open')) {
+                        mainNav.classList.remove('open');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                  }
+            });
       });
 
       // Contact form handling (client-side)
