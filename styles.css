@@ -32,13 +32,14 @@ body::before {
   z-index: -1;
   /* subtle fade + actual image layer */
   background-image:
-    linear-gradient(to top, #ffffff 0%, #ffffff 15%, rgba(255,255,255,0.3) 35%, rgba(255,255,255,0) 60%),
+    linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 75%),
     url("image.png");
   background-repeat: no-repeat, repeat-x;
   background-position: bottom center, bottom center;
   background-size: cover, auto 200px;
-  background-blend-mode: normal;
-  filter: saturate(1.15) contrast(1.08) brightness(1.04);
+  background-attachment: fixed, fixed;
+  background-blend-mode: lighten;
+  filter: saturate(1.1) contrast(1.02) brightness(1.02);
   opacity: 1;
 }
 
