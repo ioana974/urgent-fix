@@ -576,6 +576,8 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  font-family: inherit;
 }
 
 .app-store-btn {
