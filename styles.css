@@ -81,7 +81,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 0.8rem 0;
+  padding: 0.4rem 0;
 }
 
 .brand-logo {
@@ -91,7 +91,7 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   color: var(--text);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   transition: opacity 0.2s ease;
   position: relative;
   z-index: 1;
@@ -117,7 +117,7 @@ img { max-width: 100%; display: block; }
   opacity: 0.75;
 }
 
-.brand-logo img { width: 144px; height: auto; }
+.brand-logo img { width: 72px; height: auto; }
 
 .main-nav {
   display: flex;
