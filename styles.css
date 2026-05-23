@@ -827,7 +827,7 @@ img { max-width: 100%; display: block; }
   }
   
   body::before {
-    height: 150px !important;
+    height: 200px !important;
     background-attachment: scroll, scroll !important;
     opacity: 1 !important;
   }
