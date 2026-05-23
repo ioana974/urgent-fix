@@ -72,3 +72,22 @@ document.addEventListener('DOMContentLoaded', function () {
             });
       }
 });
+
+// iOS Modal Functions
+function showIOSPopup() {
+      const modal = document.getElementById('iosModal');
+      modal.classList.add('show');
+}
+
+function closeIOSPopup() {
+      const modal = document.getElementById('iosModal');
+      modal.classList.remove('show');
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+      const modal = document.getElementById('iosModal');
+      if (event.target === modal) {
+            modal.classList.remove('show');
+      }
+});
