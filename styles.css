@@ -625,7 +625,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
 }
@@ -749,6 +749,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 /* iPhone Frame Styling */
