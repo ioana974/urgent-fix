@@ -827,13 +827,13 @@ img { max-width: 100%; display: block; }
   }
   
   body::before {
-    height: 100px !important;
+    height: 150px !important;
     background-attachment: scroll, scroll !important;
-    opacity: 0.5 !important;
+    opacity: 1 !important;
   }
   
   body::after {
-    height: 40px !important;
+    height: 30px !important;
   }
   
   .images-grid {
