@@ -37,7 +37,7 @@ body::before {
   background-repeat: no-repeat, repeat-x;
   background-position: bottom center, bottom center;
   background-size: cover, auto 200px;
-  background-attachment: fixed, fixed;
+  background-attachment: scroll, scroll;
   background-blend-mode: normal;
   filter: none;
   opacity: 1;
@@ -824,6 +824,16 @@ img { max-width: 100%; display: block; }
   
   body {
     overflow-x: hidden !important;
+  }
+  
+  body::before {
+    height: 100px !important;
+    background-attachment: scroll, scroll !important;
+    opacity: 0.5 !important;
+  }
+  
+  body::after {
+    height: 40px !important;
   }
   
   .images-grid {
