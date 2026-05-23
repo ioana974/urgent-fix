@@ -754,14 +754,14 @@ img { max-width: 100%; display: block; }
 /* iPhone Frame Styling */
 .iphone-frame {
   position: relative;
-  width: 320px;
-  height: 640px;
-  border-radius: 60px;
+  width: 280px;
+  height: 560px;
+  border-radius: 56px;
   background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-  border: 10px solid #1a1a1a;
+  border: 9px solid #1a1a1a;
   box-shadow: 
-    0 0 0 12px #1a1a1a,
-    0 0 0 14px #444,
+    0 0 0 10px #1a1a1a,
+    0 0 0 12px #444,
     0 40px 100px rgba(0, 0, 0, 0.6);
   padding: 0;
   overflow: hidden;
@@ -790,29 +790,16 @@ img { max-width: 100%; display: block; }
 }
 
 .screen-header {
-  padding: 12px 16px;
-  padding-top: 40px;
+  padding: 8px 14px;
+  padding-top: 36px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: #000;
   background: #f8f8f8;
   border-bottom: 1px solid #e5e5e5;
-}
-
-.carrier {
-  font-weight: 500;
-  font-size: 0.75rem;
-}
-
-.time {
-  font-weight: 700;
-}
-
-.battery {
-  font-size: 0.9rem;
 }
 
 .reviews-container {
@@ -943,8 +930,8 @@ img { max-width: 100%; display: block; }
   }
 
   .iphone-frame {
-    width: 290px;
-    height: 580px;
+    width: 260px;
+    height: 520px;
   }
 }
 
@@ -970,8 +957,8 @@ img { max-width: 100%; display: block; }
   }
 
   .iphone-frame {
-    width: 260px;
-    height: 520px;
+    width: 240px;
+    height: 480px;
   }
 }
 
