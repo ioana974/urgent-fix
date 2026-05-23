@@ -28,18 +28,18 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 200px;
+  height: 280px;
   z-index: -1;
   /* subtle fade + actual image layer */
   background-image:
-    linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 75%),
+    linear-gradient(to top, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.7) 35%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 85%),
     url("image.png");
   background-repeat: no-repeat, repeat-x;
   background-position: bottom center, bottom center;
-  background-size: cover, auto 200px;
+  background-size: cover, auto 280px;
   background-attachment: fixed, fixed;
-  background-blend-mode: lighten;
-  filter: saturate(1.1) contrast(1.02) brightness(1.02);
+  background-blend-mode: normal;
+  filter: none;
   opacity: 1;
 }
 
