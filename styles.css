@@ -32,7 +32,7 @@ body::before {
   z-index: -1;
   /* subtle fade + actual image layer */
   background-image:
-    linear-gradient(to top, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.7) 35%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 85%),
+    linear-gradient(to top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 40%, rgba(255,255,255,0.05) 70%, rgba(255,255,255,0) 100%),
     url("image.png");
   background-repeat: no-repeat, repeat-x;
   background-position: bottom center, bottom center;
