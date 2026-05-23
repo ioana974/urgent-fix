@@ -756,6 +756,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  margin-top: -4rem;
 }
 
 /* iPhone Frame Styling */
