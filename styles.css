@@ -570,7 +570,13 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
-  .header-inner, .footer-inner { flex-direction: column; align-items: flex-start; }
+  .header-inner { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
   .main-nav { gap: 1rem; }
   .hero h1 { font-size: 2.4rem; }
 }
@@ -626,23 +632,37 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 900px) {
-  .nav-toggle { display: inline-flex; margin-left: auto; }
+  .nav-toggle { 
+    display: inline-flex !important; 
+    margin-left: auto;
+    order: 3;
+  }
   .main-nav {
-    position: absolute;
-    top: 68px;
-    right: 1rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 1rem;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 0.9rem 1rem;
-    display: none;
+    display: none !important;
     flex-direction: column;
     gap: 0.75rem;
     box-shadow: 0 18px 50px rgba(2,6,23,0.12);
     min-width: 220px;
     z-index: 30;
+    max-width: calc(100% - 2rem);
   }
-  .main-nav.open { display: flex; }
+  .main-nav.open { 
+    display: flex !important; 
+  }
+  .main-nav a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+  }
   .brand-logo img { width: 60px; }
 }
 
