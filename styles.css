@@ -802,11 +802,10 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid #e5e5e5;
 }
 
-.header-logo {
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: #1d4ed8;
-  letter-spacing: -1px;
+.header-logo-img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
 }
 
 .time {
