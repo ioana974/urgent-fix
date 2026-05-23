@@ -695,7 +695,9 @@ img { max-width: 100%; display: block; }
   display: flex;
   gap: 1rem;
   margin: 2.5rem 0 1.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-button {
