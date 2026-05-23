@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 20;
-  overflow: hidden;
+  overflow: visible;
   background: linear-gradient(180deg, rgba(59, 130, 246, 0.24) 0%, rgba(248, 251, 255, 0.98) 100%);
   border-bottom: 1px solid rgba(59, 130, 246, 0.30);
   box-shadow: 0 4px 32px rgba(15, 23, 42, 0.14);
@@ -577,7 +577,13 @@ img { max-width: 100%; display: block; }
     flex-wrap: nowrap;
   }
   .footer-inner { flex-direction: column; align-items: flex-start; }
-  .main-nav { gap: 1rem; }
+  .main-nav { 
+    gap: 1rem; 
+    display: none !important;
+  }
+  .main-nav.open {
+    display: flex !important;
+  }
   .hero h1 { font-size: 2.4rem; }
 }
 
@@ -635,14 +641,12 @@ img { max-width: 100%; display: block; }
   .nav-toggle { 
     display: inline-flex !important; 
     margin-left: auto;
-    order: 3;
   }
   .main-nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    margin: 0 1rem;
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -651,9 +655,8 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     gap: 0.75rem;
     box-shadow: 0 18px 50px rgba(2,6,23,0.12);
-    min-width: 220px;
     z-index: 30;
-    max-width: calc(100% - 2rem);
+    margin-top: 0.5rem;
   }
   .main-nav.open { 
     display: flex !important; 
@@ -661,7 +664,8 @@ img { max-width: 100%; display: block; }
   .main-nav a {
     width: 100%;
     justify-content: flex-start;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
   }
   .brand-logo img { width: 60px; }
 }
