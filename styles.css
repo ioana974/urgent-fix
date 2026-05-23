@@ -117,7 +117,7 @@ img { max-width: 100%; display: block; }
   opacity: 0.75;
 }
 
-.brand-logo img { width: 72px; height: auto; }
+.brand-logo img { width: 144px; height: auto; }
 
 .main-nav {
   display: flex;
