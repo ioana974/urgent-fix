@@ -550,6 +550,56 @@ img { max-width: 100%; display: block; }
 .hero-card li { padding-left: 1rem; position: relative; color: var(--muted); }
 .hero-card li::before { content: "•"; position: absolute; left: 0; color: var(--primary); }
 
+/* App advertisement section */
+.app-ad { text-align: center; }
+.app-ad h3 { margin: 0 0 0.75rem; font-size: 1.35rem; color: var(--text); }
+.app-ad p { margin: 0 0 1.5rem; color: var(--muted); font-size: 1rem; }
+
+.app-buttons { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-store-btn, .google-play-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.app-store-btn {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: #fff;
+}
+
+.app-store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.google-play-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  color: #fff;
+}
+
+.google-play-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
+  background: linear-gradient(135deg, #3873e6 0%, #2d9548 100%);
+}
+
 .feature-section h2, .how-it-works h2, .strategy-section h2 { font-size: 2rem; margin-bottom: 1rem; }
 .feature-section p, .strategy-section p { color: var(--muted); max-width: 720px; }
 
